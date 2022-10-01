@@ -1,0 +1,31 @@
+{
+	"name": "be",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon app.js -e js,json",
+		"migrate": "sequelize db:create&&npx sequelize-cli db:migrate",
+		"migrate-dev": "npx sequelize-cli db:migrate:undo:all&&npx sequelize-cli db:migrate"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.20.0",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.1",
+		"express-validation": "^3.0.5",
+		"http-status": "^1.5.3",
+		"joi": "^17.2.0",
+		"morgan": "^1.10.0",
+		"mysql2": "^2.3.3",
+		"sequelize": "^6.23.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20",
+		"sequelize-cli": "^6.5.1"
+	}
+}
